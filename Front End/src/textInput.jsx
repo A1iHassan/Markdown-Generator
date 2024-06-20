@@ -27,6 +27,7 @@ function TextInput() {
         onChange={(e) => {
           setInput(e.target.value);
         }}
+        placeholder="enter a text"
       />
       <pre>{output}</pre>
     </>

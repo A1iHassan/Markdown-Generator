@@ -33,6 +33,7 @@ function HeadingInput() {
         onChange={(e) => {
           setInput(e.target.value);
         }}
+        placeholder="enter a heading"
       />
       <pre>{output}</pre>
     </>
