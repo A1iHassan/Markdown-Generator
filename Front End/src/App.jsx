@@ -1,9 +1,7 @@
-import TestComponent from "./tester";
-
 function App() {
   return (
     <>
-      <TestComponent />
+      <h1>hi</h1>
     </>
   );
 }
