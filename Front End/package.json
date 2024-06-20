@@ -13,6 +13,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "remark": "^15.0.1",
+    "remark-stringify": "^11.0.0",
     "sass": "^1.77.4",
     "uuid": "^10.0.0"
   },
