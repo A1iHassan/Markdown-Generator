@@ -32,7 +32,6 @@ export default function Page({ elements, dispatch }) {
           </div>
         ))}
       </div>
-      <h1>hi</h1>
     </>
   );
 }
