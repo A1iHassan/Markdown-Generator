@@ -1,11 +1,9 @@
-import HeadingInput from "./headingInput";
-import TextInput from "./textInput";
+import Sheet from "./components/sheet";
 
 function App() {
   return (
     <>
-      <HeadingInput />
-      <TextInput />
+      <Sheet />
     </>
   );
 }
