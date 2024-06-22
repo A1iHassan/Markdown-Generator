@@ -2,7 +2,7 @@ import { remark } from "remark";
 import stringify from "remark-stringify";
 import { useState, useEffect } from "react";
 
-function TextInput() {
+function Paragraph() {
   const [input, setInput] = useState("");
   const [output, setOutput] = useState("");
   useEffect(() => {
@@ -34,4 +34,4 @@ function TextInput() {
   );
 }
 
-export default TextInput;
+export default Paragraph;

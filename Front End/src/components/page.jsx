@@ -1,13 +1,13 @@
-import TextInput from "./textInput";
-import HeadingInput from "./headingInput";
+import Paragraph from "./paragraph";
+import Heading from "./headingInput";
 
 export default function Page({ elements, dispatch }) {
   return (
     <>
       <div className="texts">
         {elements.texts.map((item) => (
-          <div className="texts" key={item}>
-            <TextInput />
+          <div className="Paragraph" key={item}>
+            <Paragraph />
             <button
               onClick={() => {
                 dispatch(`delete ${item}`);
@@ -18,10 +18,10 @@ export default function Page({ elements, dispatch }) {
           </div>
         ))}
       </div>
-      <div className="headings">
+      <div className="Heading">
         {elements.headings.map((item) => (
-          <div className="headings" key={item}>
-            <HeadingInput />
+          <div className="Heading" key={item}>
+            <Heading />
             <button
               onClick={() => {
                 dispatch(`delete ${item}`);

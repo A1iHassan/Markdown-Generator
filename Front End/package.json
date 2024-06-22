@@ -15,6 +15,7 @@
     "remark": "^15.0.1",
     "remark-stringify": "^11.0.0",
     "sass": "^1.77.4",
+    "use-context-selector": "^2.0.0",
     "uuid": "^10.0.0"
   },
   "devDependencies": {

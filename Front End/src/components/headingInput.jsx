@@ -2,13 +2,13 @@ import { remark } from "remark";
 import stringify from "remark-stringify";
 import { useState, useEffect } from "react";
 
-function HeadingInput() {
+function Heading() {
   const [input, setInput] = useState("");
   const [output, setOutput] = useState("");
   useEffect(() => {
     const text = "";
     const processor = remark();
-    const ast = processor().parse(text);
+    const ast = processor().parse(text); // Abstract syntax tree
     delete ast.position;
     delete ast.end;
 
@@ -40,4 +40,4 @@ function HeadingInput() {
   );
 }
 
-export default HeadingInput;
+export default Heading;
