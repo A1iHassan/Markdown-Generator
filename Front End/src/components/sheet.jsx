@@ -4,10 +4,7 @@ import NavBar from "./navBar";
 import { elementsReducer } from "../utils/reducer";
 
 export default function Sheet() {
-  const [state, dispatch] = useReducer(elementsReducer, {
-    headings: [],
-    texts: [],
-  });
+  const [state, dispatch] = useReducer(elementsReducer, []);
   return (
     <>
       <NavBar dispatch={dispatch} />
