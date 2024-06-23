@@ -4,7 +4,7 @@ This Flask application provides an API endpoint for rephrasing text using a serv
 
 ## Project Structure
 
-backend/
+flask/
 ├── app/
 │ ├── init.py # Initializes the Flask application
 │ ├── routes/
@@ -38,23 +38,22 @@ Content-Type: application/json
 
 ##### Request Payload
 
-```json
-{"text": "Text to be rephrased"}```
+{"text": "Text to be rephrased"}
 
 ##### Response
-```json
 Content-Type: application/json 
-{"rephrased_text": "Rephrased text here"}```
+{"rephrased_text": "Rephrased text here"}
 
 ### Example Curl Request
 
-```sh
 curl -X POST http://0.0.0.0:5000/rephrase  -H "Content-Type: application/json"  -d '{"text": "Hello, world!"}'
-```
+
 ##### Response
 
-```json
 {
-"rephrased_text":  ["A simple greeting is being sent out.", "It's a common phrase used in programming.", "It's often used as a test to see if a system is working.", "The phrase is a way to acknowledge the existence of the world."]
+"rephrased_text":  [
+"A simple greeting is being sent out.",
+"It's a common phrase used in programming.",
+"It's often used as a test to see if a system is working.",
+"The phrase is a way to acknowledge the existence of the world."]
 }
-```
