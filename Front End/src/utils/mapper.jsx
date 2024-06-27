@@ -14,7 +14,7 @@ export function mapElement(arr, dispatch) {
       })}
       <button
         onClick={() => {
-          dispatch("delete");
+          dispatch(`delete ${item}`);
         }}
       >
         delete
