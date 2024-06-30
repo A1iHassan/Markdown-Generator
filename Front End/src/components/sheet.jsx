@@ -1,14 +1,14 @@
-import { useReducer } from "react";
-import Page from "./page";
-import NavBar from "./navBar";
-import { elementsReducer } from "../utils/reducer";
+import { ASTProvidor } from "../util/contextProvidor";
+import InputPage from "./inputPage";
+import MarkdownPage from "./markdownPage";
 
 export default function Sheet() {
-  const [state, dispatch] = useReducer(elementsReducer, []);
   return (
     <>
-      <NavBar dispatch={dispatch} />
-      <Page elements={state} dispatch={dispatch} />
+      <ASTProvidor>
+        <InputPage />
+        <MarkdownPage />
+      </ASTProvidor>
     </>
   );
 }
