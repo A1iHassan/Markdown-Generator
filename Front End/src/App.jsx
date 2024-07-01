@@ -1,11 +1,15 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Landing from "./pages/landingPage";
 import Sheet from "./pages/sheet";
 
 function App() {
   return (
-    <>
-      <Landing />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="sheet" element={<Sheet />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

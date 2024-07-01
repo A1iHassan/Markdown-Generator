@@ -1,5 +1,6 @@
 import "../style/landing.scss";
 import { useInView } from "react-intersection-observer";
+import { Link } from "react-router-dom";
 
 export default function Landing() {
   const { ref: ref1, inView: inView1 } = useInView({
@@ -24,9 +25,9 @@ export default function Landing() {
         <section className="first-lable">
           <h1>Markdown Generator</h1>
           <span>Markdown made simple</span>
-          <a href="">
+          <Link to="/sheet">
             <span>Try it</span>
-          </a>
+          </Link>
         </section>
       </header>
       <section
