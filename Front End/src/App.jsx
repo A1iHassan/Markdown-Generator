@@ -1,9 +1,10 @@
-import Sheet from "./components/sheet";
+import Landing from "./pages/landingPage";
+import Sheet from "./pages/sheet";
 
 function App() {
   return (
     <>
-      <Sheet />
+      <Landing />
     </>
   );
 }

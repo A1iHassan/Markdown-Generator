@@ -1,6 +1,6 @@
 import { ASTProvidor } from "../util/contextProvidor";
-import InputPage from "./inputPage";
-import MarkdownPage from "./markdownPage";
+import InputPage from "../components/inputPage";
+import MarkdownPage from "../components/markdownPage";
 
 export default function Sheet() {
   return (
