@@ -3,6 +3,7 @@
   margin: 0;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
 }
 
 .landing-nav {
@@ -63,12 +64,16 @@
     color: inherit;
     border: 1px solid black;
     border-radius: 4rem;
-    background-color: rgb(207, 207, 207);
+    background-color: rgb(245, 245, 245);
     width: 10rem;
     height: 3rem;
     display: grid;
     place-items: center;
+    &:hover span {
+      transform: translateY(-0.25rem);
+    }
     span {
+      transition: all 0.3s;
       transform: translateY(0rem);
       word-spacing: 0;
     }
@@ -77,6 +82,7 @@
 
 .features {
   margin-block: 10rem;
+  transition: 1s ease;
   h2 {
     font-size: 5ch;
     font-weight: 300;
@@ -103,6 +109,7 @@
 }
 
 .about {
+  transition: all 1s ease;
   h2 {
     font-size: 5ch;
     font-weight: 400;
@@ -139,8 +146,9 @@
   }
 }
 
-footer {
+.contact {
   height: 50rem;
+  transition: all 1s ease;
   h2 {
     font-size: 5ch;
     font-weight: 400;
@@ -170,4 +178,12 @@ footer {
       }
     }
   }
+}
+
+.none {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
 }

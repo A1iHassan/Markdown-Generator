@@ -1,13 +1,25 @@
 import "../style/landing.scss";
+import { useInView } from "react-intersection-observer";
 
 export default function Landing() {
+  const { ref: ref1, inView: inView1 } = useInView({
+    threshold: 0.8,
+    delay: 500,
+  });
+  const { ref: ref2, inView: inView2 } = useInView({
+    threshold: 0.8,
+  });
+  const { ref: ref3, inView: inView3 } = useInView({
+    threshold: 0.7,
+  });
+  console.log(inView1, inView2, inView3);
   return (
     <>
       <header>
         <nav className="landing-nav">
-          <a href="">Features</a>
-          <a href="">About</a>
-          <a href="">Contact</a>
+          <a href="#features">Features</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
         </nav>
         <section className="first-lable">
           <h1>Markdown Generator</h1>
@@ -17,7 +29,11 @@ export default function Landing() {
           </a>
         </section>
       </header>
-      <section className="features">
+      <section
+        className={`features ${inView1 ? "visible" : "none"}`}
+        id="features"
+        ref={ref1}
+      >
         <h2>Features</h2>
         <div className="part">
           <svg
@@ -105,7 +121,11 @@ export default function Landing() {
           </div>
         </div>
       </section>
-      <section className="about">
+      <section
+        className={`about ${inView2 ? "visible" : "none"}`}
+        id="about"
+        ref={ref2}
+      >
         <h2>About The Project</h2>
         <span>
           - Empowering writers to create clean, web-ready content with markdown
@@ -129,7 +149,11 @@ export default function Landing() {
           thrilled to see how it can benefit writers everywhere.
         </p>
       </section>
-      <footer>
+      <footer
+        className={`contact ${inView3 ? "visible" : "none"}`}
+        id="contact"
+        ref={ref3}
+      >
         <h2>team members</h2>
         <div>
           <span className="name">Ali Gamereldin</span>
