@@ -29,7 +29,7 @@ export default function HeadingElement({ initialLevel = 1, initialText = "" }) {
           setText(e.target.value);
         }}
         onKeyDown={(e) => {
-          if (e.key === "Enter") {
+          if (e.key === "Shift") {
             const newAst = { ...ast };
             newAst.children.push(heading(level, text));
             setAst(newAst);

@@ -20,7 +20,7 @@ export default function LinkElement({ initialUrl = "", initialText = "" }) {
         value={text}
         onChange={(e) => setText(e.target.value)}
         onKeyDown={(e) => {
-          if (e.key === "Enter") {
+          if (e.key === "Shift") {
             const newAst = { ...ast };
             newAst.children.push(link(url, text));
             setAst(newAst);
@@ -29,7 +29,9 @@ export default function LinkElement({ initialUrl = "", initialText = "" }) {
         }}
         placeholder="Enter link text"
       />
-      <a href={url}>{text}</a>
+      <p>
+        <a href={url}>{text}</a>
+      </p>
     </>
   );
 }

@@ -13,7 +13,7 @@ export default function InlineCodeElement({ initialCode = "" }) {
         value={code}
         onChange={(e) => setCode(e.target.value)}
         onKeyDown={(e) => {
-          if (e.key === "Enter") {
+          if (e.key === "Shift") {
             const newAst = { ...ast };
             newAst.children.push(inlineCode(text));
             setAst(newAst);

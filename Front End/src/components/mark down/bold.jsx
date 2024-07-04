@@ -12,7 +12,7 @@ export default function BoldElement({ initialText = "" }) {
         value={text}
         onChange={(e) => setText(e.target.value)}
         onKeyDown={(e) => {
-          if (e.key === "Enter") {
+          if (e.key === "Shift") {
             const newAst = { ...ast };
             newAst.children.push(bold(text));
             setAst(newAst);

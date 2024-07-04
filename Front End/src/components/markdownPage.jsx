@@ -10,9 +10,9 @@ export default function MarkdownPage() {
   }, [ast]);
   const output = remark().use(stringify).stringify(ast);
   return (
-    <>
-      <h2>markdown page</h2>
+    <div className="output-page">
+      <h2>Markdown Page</h2>
       <pre>{output}</pre>
-    </>
+    </div>
   );
 }

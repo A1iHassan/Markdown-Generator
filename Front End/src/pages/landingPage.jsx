@@ -15,7 +15,7 @@ export default function Landing() {
   });
   console.log(inView1, inView2, inView3);
   return (
-    <>
+    <div className="all">
       <header>
         <nav className="landing-nav">
           <a href="#features">Features</a>
@@ -232,7 +232,7 @@ export default function Landing() {
           </span>
         </div>
       </footer>
-    </>
+    </div>
   );
 }
 // https://github.com/saiAl

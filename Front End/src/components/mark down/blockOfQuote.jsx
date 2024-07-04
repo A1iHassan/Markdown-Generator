@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { AST } from "../../util/contextProvidor";
 import { blockquote } from "../../constants/markdownElements";
+import "../../App.css";
 
 export default function BlockquoteElement({ initialText = "" }) {
   const [text, setText] = useState(initialText);
@@ -12,7 +13,7 @@ export default function BlockquoteElement({ initialText = "" }) {
         value={text}
         onChange={(e) => setText(e.target.value)}
         onKeyDown={(e) => {
-          if (e.key === "Enter") {
+          if (e.key === "Shift") {
             const newAst = { ...ast };
             newAst.children.push(blockquote(text));
             setAst(newAst);

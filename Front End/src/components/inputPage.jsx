@@ -9,7 +9,11 @@ export default function InputPage() {
   return (
     <>
       <ElementsNav dispatch={dispatch} />
-      {mapElements(state)}
+
+      <section className="input-elements">
+        <h2>Input Page</h2>
+        {mapElements(state)}
+      </section>
     </>
   );
 }
