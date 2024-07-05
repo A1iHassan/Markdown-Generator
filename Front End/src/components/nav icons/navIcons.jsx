@@ -72,10 +72,10 @@ export function InlineCode() {
 
 export function CodeBlock() {
   return (
-    <div className="icon">
+    <div className="icon code-block">
       <svg
-        width={innerWidth < 800 ? "1rem" : "1rem"}
-        height={innerWidth < 800 ? "1rem" : "1rem"}
+        width={innerWidth < 800 ? "1rem" : "2rem"}
+        height={innerWidth < 800 ? "1rem" : "2rem"}
         viewBox="0 0 25 25"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

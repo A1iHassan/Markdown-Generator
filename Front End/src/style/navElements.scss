@@ -2,6 +2,9 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  position: sticky;
+  top: 1.5rem;
+  height: 55rem;
   padding: 1rem 0 0 1rem;
   button {
     height: 4rem;
@@ -27,4 +30,8 @@
     opacity: 0;
     transform: translate(1rem, 0);
   }
+}
+
+.code-block {
+  transform: translateX(-0.29rem);
 }

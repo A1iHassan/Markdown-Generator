@@ -11,28 +11,47 @@ import OrderedListElement from "../components/mark down/orderedList";
 import ParagraphElement from "../components/mark down/paragraph";
 import UnorderedListElement from "../components/mark down/unorderedList";
 
-const components = {
-  heading: <HeadingElement />,
-  paragraph: <ParagraphElement />,
-  bold: <BoldElement />,
-  italic: <ItalicElement />,
-  BoldAndItalic: <BoldAndItalicElement />,
-  blockquote: <BlockquoteElement />,
-  orderedList: <OrderedListElement />,
-  unOrderedList: <UnorderedListElement />,
-  codeBlock: <CodeBlockElement />,
-  inlineCode: <InlineCodeElement />,
-  horizontalRule: <HorizontalRuleElement />,
-  link: <LinkElement />,
-};
-export function mapElements(arr) {
-  return arr.map((element) => (
-    <div key={element.split(" ")[1] + "parent"}>
-      {Object.keys(components).map((key) => {
-        if (element.includes(key)) {
-          return <div key={element.split(" ")[1]}>{components[key]}</div>;
-        }
-      })}
-    </div>
-  ));
+export function mapElements(arr, dispatch, ast, setAst) {
+  return arr.map((element) => {
+    const components = {
+      heading: <HeadingElement ID={element.split(" ")[1]} />,
+      paragraph: <ParagraphElement ID={element.split(" ")[1]} />,
+      bold: <BoldElement ID={element.split(" ")[1]} />,
+      italic: <ItalicElement ID={element.split(" ")[1]} />,
+      BoldAndItalic: <BoldAndItalicElement ID={element.split(" ")[1]} />,
+      blockquote: <BlockquoteElement ID={element.split(" ")[1]} />,
+      orderedList: <OrderedListElement ID={element.split(" ")[1]} />,
+      unOrderedList: <UnorderedListElement ID={element.split(" ")[1]} />,
+      codeBlock: <CodeBlockElement ID={element.split(" ")[1]} />,
+      inlineCode: <InlineCodeElement ID={element.split(" ")[1]} />,
+      horizontalRule: <HorizontalRuleElement ID={element.split(" ")[1]} />,
+      link: <LinkElement ID={element.split(" ")[1]} />,
+    };
+    return (
+      <div key={element.split(" ")[1] + "parent"}>
+        {Object.keys(components).map((key) => {
+          if (element.includes(key)) {
+            return (
+              <div key={element.split(" ")[1]}>
+                {components[key]}
+                <button
+                  onClick={() => {
+                    dispatch(`delete ${element}`);
+                    const newAst = { ...ast };
+                    const newChildren = newAst.children.filter(
+                      (node) => node.id !== element.split(" ")[1]
+                    );
+                    newAst.children = newChildren;
+                    setAst(newAst);
+                  }}
+                >
+                  Delete
+                </button>
+              </div>
+            );
+          }
+        })}
+      </div>
+    );
+  });
 }

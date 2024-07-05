@@ -5,6 +5,7 @@ import stringify from "remark-stringify";
 
 export default function MarkdownPage() {
   const { ast, setAst } = useContext(AST);
+  console.log(ast);
   useEffect(() => {
     setAst(ast);
   }, [ast]);

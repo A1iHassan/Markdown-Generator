@@ -1,5 +1,3 @@
-import { v4 as uuidv4 } from "uuid";
-
 // Define AST nodes for each markdown element with an ID
 
 export const heading = (depth, text) => ({

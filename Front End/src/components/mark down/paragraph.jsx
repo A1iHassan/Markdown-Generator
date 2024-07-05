@@ -1,10 +1,15 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
+
 import { AST } from "../../util/contextProvidor";
 import { paragraph } from "../../constants/markdownElements";
 
-export default function ParagraphElement({ initialText = "" }) {
+export default function ParagraphElement({ initialText = "", ID }) {
   const [text, setText] = useState(initialText);
   const { ast, setAst } = useContext(AST);
+  const [id, setId] = useState();
+  useEffect(() => {
+    setId(ID);
+  }, []);
 
   return (
     <>
@@ -12,11 +17,18 @@ export default function ParagraphElement({ initialText = "" }) {
         value={text}
         onChange={(e) => setText(e.target.value)}
         onKeyDown={(e) => {
-          if (e.key === "Shift") {
+          if (e.altKey && e.key === "Enter") {
+            const newNode = paragraph(text);
+            newNode["id"] = id;
+            const ids = ast.children.map((item) => item.id);
             const newAst = { ...ast };
-            newAst.children.push(paragraph(text));
-            setAst(newAst);
-            console.log(ast);
+            if (ids.includes(id)) {
+              newAst.children[ids.indexOf(id)] = newNode;
+              setAst(newAst);
+            } else {
+              newAst.children.push(newNode);
+              setAst(newAst);
+            }
           }
         }}
         rows="4"
