@@ -1,11 +1,3 @@
-# Markdown Generator
+# V1
 
-## Markdown Generator
-
-### Markdown Generator
-
-#### Markdown Generator
-
-##### Markdown Generator
-
-###### Markdown Generator
+this is going to be a redo for the Markdown Generator project
