@@ -29,12 +29,14 @@ function App() {
         {markdown}
         <NodeCmpt ast={ast} />
       </aside>
+
       <textarea
         className="m-3 bg-amber-50 focus:outline-amber-200 flex-1 h-1/2 resize-none p-2 font-mono"
         name="result"
         id="result"
         onChange={handleChange}
         onKeyDown={show} // this is here for debugging purposes
+
       ></textarea>
     </div>
   );

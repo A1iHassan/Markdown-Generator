@@ -6,3 +6,4 @@ export interface AstNode {
   depth?: number;
   children?: AstNode[];
 }
+
