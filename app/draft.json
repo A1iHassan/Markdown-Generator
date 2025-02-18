@@ -1,0 +1,17 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "heading",
+      "depth": 1,
+      "children": [{ "type": "text", "value": "Hello World" }]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        { "type": "text", "value": "This is a " },
+        { "type": "strong", "children": [{ "type": "text", "value": "bold" }] }
+      ]
+    }
+  ]
+}
