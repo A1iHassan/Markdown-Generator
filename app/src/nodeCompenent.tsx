@@ -6,8 +6,6 @@ interface NodeType {
 }
 
 const NodeCmpt = ({ ast }: NodeType) => {
-  console.log(ast);
-
   const renderPhrasingContent = (node: PhrasingContent): ReactNode => {
     switch (node.type) {
       case "text":
