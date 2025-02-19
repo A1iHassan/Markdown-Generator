@@ -21,7 +21,7 @@ export const renderPhrasingContent = (node: PhrasingContent): ReactNode => {
     case "link":
       return createElement(
         "a",
-        { href: node.url },
+        { href: node.url, className: "text-blue-500" },
         ...node.children.map(renderPhrasingContent)
       );
     case "image":
