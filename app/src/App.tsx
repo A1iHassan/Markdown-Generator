@@ -1,12 +1,13 @@
 import { ChangeEvent, KeyboardEvent, useState, useRef } from "react";
 import { remark } from "remark";
 import NodeCmpt from "./nodeCompenent";
+import { Root } from "mdast";
 
 function App() {
   const [markdown, setMarkdown] = useState("");
   const timeRef = useRef<number | null>(null);
 
-  const ast = remark.parse(markdown);
+  const ast: Root = remark.parse(markdown);
   // this function is here for debugging purposes
   const show = (e: KeyboardEvent<HTMLTextAreaElement>) => {
     if (e.shiftKey && e.key == "Enter") {
@@ -26,7 +27,6 @@ function App() {
   return (
     <div className="flex flex-row justify-around h-screen">
       <aside className="m-3 bg-amber-50 focus:outline-amber-200 flex-1 h-1/2 resize-none p-2">
-        {markdown}
         <NodeCmpt ast={ast} />
       </aside>
       <textarea
