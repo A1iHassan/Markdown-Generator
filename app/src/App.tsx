@@ -4,6 +4,7 @@ import remarkGfm from "remark-gfm";
 import remarkParse from "remark-parse";
 import NodeCmpt from "./components/nodeCompenent";
 import { Root } from "mdast";
+import Copy from "./components/copyButton";
 
 function App() {
   const [markdown, setMarkdown] = useState("");
@@ -42,7 +43,10 @@ function App() {
       </aside>
 
       <aside className="flex flex-col bg-slate-50 flex-1 h-11/12 p-2 font-mono">
-        <span className="text-3xl text-slate-400">Markdown</span>
+        <div className="flex flex-row justify-between text-slate-500">
+          <span className="text-3xl text-slate-400">Markdown</span>
+          <Copy />
+        </div>
         <textarea
           className="focus:outline-slate-300 resize-none h-full p-2"
           name="result"
