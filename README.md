@@ -4,8 +4,9 @@ A simple web-based Markdown editor that allows users to type Markdown on the rig
 
 ### Features  
 - Live preview: See Markdown render as you type.  
-- Supports GitHub Flavored Markdown (GFM).  
-- Clean and minimalistic UI.  
+- Supports GitHub Flavored Markdown (GFM).
+- Copy your work in a single click.
+- Clean and minimalistic UI.
 
 ### Demo  
 You can try the live demo here: [Markdown Generator](https://markdown-generator-six.vercel.app/)  
