@@ -1,3 +1,4 @@
-# Markdown Geerateot v 0.0.1
+# Markdown Geerateot v 1.1.0
 
-This is going to be a redo for the Markdown project
+**New feature**
+Now you can directly copy the markdown after finishing working on your file.
