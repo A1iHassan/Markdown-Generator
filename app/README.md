@@ -1,8 +1,3 @@
-# Markdown Geerateot v 1.1.0
+# Markdown Geerateot v 0.0.1
 
-### **New feature**
-Now you can directly copy the markdown after finishing working on your file.
-
-### **All features**
-* Convert your markdown to visible results in real time.
-* Copy your final work in one click
+This is going to be a redo for the Markdown project
