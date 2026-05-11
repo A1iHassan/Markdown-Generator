@@ -36,86 +36,86 @@ function Landing() {
 
   return (
     <>
-      <header className="relative flex justify-center items-center font-bold h-[90vh] mb-12 md:mb-24 border-b-slate-400 overflow-hidden w-full">
-        <div className="bg-linear-to-r from-transparent via-slate-50 via-opacity-10 via-50% h-full w-full flex flex-col justify-center items-center z-10">
-          <h1 className="text-7xl pt-3 mb-8 text-center">Markdown Generator</h1>
-          <span className="mb-10 text-xl text-slate-600">
+      <header className="relative flex justify-center items-center font-bold h-[85dvh] sm:h-[90dvh] mb-8 md:mb-24 border-b-slate-400 overflow-hidden w-full">
+        <div className="bg-linear-to-r from-transparent via-slate-50 via-opacity-10 via-50% h-full w-full flex flex-col justify-center items-center z-10 px-4">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl pt-3 mb-4 sm:mb-8 text-center">Markdown Generator</h1>
+          <span className="mb-6 sm:mb-10 text-base sm:text-xl text-slate-600 text-center">
             Mark your work down more efficiently
           </span>
           <Link
             to="/convert"
-            className="px-8 py-4 bg-slate-900 text-white text-lg font-semibold rounded-full hover:bg-slate-800 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
+            className="px-6 py-3 sm:px-8 sm:py-4 bg-slate-900 text-white text-base sm:text-lg font-semibold rounded-full hover:bg-slate-800 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
           >
             Get Started
           </Link>
         </div>
-        <div className="absolute go-up-1 animate-pulse">
+        <div className="absolute go-up-1 animate-pulse hidden sm:block">
           <Markdown />
         </div>
         {second && (
-          <div className="absolute go-up-1 animate-pulse">
+          <div className="absolute go-up-1 animate-pulse hidden sm:block">
             <Github />
           </div>
         )}
         {third && (
-          <div className="absolute go-up-1 animate-pulse">
+          <div className="absolute go-up-1 animate-pulse hidden sm:block">
             <Gmail />
           </div>
         )}
         {forth && (
-          <div className="absolute go-up-1 animate-pulse">
+          <div className="absolute go-up-1 animate-pulse hidden sm:block">
             <PDF />
           </div>
         )}
         {fifth && (
-          <div className="absolute go-up-2 animate-pulse">
+          <div className="absolute go-up-2 animate-pulse hidden sm:block">
             <PDF />
           </div>
         )}
         {sixth && (
-          <div className="absolute go-up-2 animate-pulse">
+          <div className="absolute go-up-2 animate-pulse hidden sm:block">
             <Github />
           </div>
         )}
         {seventh && (
-          <div className="absolute go-up-2 animate-pulse">
+          <div className="absolute go-up-2 animate-pulse hidden sm:block">
             <Markdown />
           </div>
         )}
         {eighth && (
-          <div className="absolute go-up-2 animate-pulse">
+          <div className="absolute go-up-2 animate-pulse hidden sm:block">
             <Gmail />
           </div>
         )}
         {ninth && (
-          <div className="absolute go-up-3 animate-pulse">
+          <div className="absolute go-up-3 animate-pulse hidden sm:block">
             <Gmail />
           </div>
         )}
         {tenth && (
-          <div className="absolute go-up-3 animate-pulse">
+          <div className="absolute go-up-3 animate-pulse hidden sm:block">
             <PDF />
           </div>
         )}
         {eleventh && (
-          <div className="absolute go-up-3 animate-pulse">
+          <div className="absolute go-up-3 animate-pulse hidden sm:block">
             <Github />
           </div>
         )}
         {twelvth && (
-          <div className="absolute go-up-3 animate-pulse">
+          <div className="absolute go-up-3 animate-pulse hidden sm:block">
             <Markdown />
           </div>
         )}
       </header>
 
-      <main className="flex flex-col gap-24 md:gap-64 py-16 md:py-32 px-4 sm:px-8 max-w-6xl mx-auto overflow-hidden w-full">
+      <main className="flex flex-col gap-16 sm:gap-24 md:gap-64 py-10 sm:py-16 md:py-32 px-4 sm:px-8 max-w-6xl mx-auto overflow-hidden w-full">
         <section className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-16">
           <div className="flex-1 space-y-6">
-            <h2 className="text-5xl font-bold bg-clip-text text-transparent bg-linear-to-r from-slate-900 to-slate-600">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-linear-to-r from-slate-900 to-slate-600">
               Formated Markdown On The Go
             </h2>
-            <p className="text-xl text-slate-600 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-slate-600 leading-relaxed">
               Seamlessly transform your raw raw markdown into beautifully
               formatted text. Our intelligent editor provides real-time preview,
               ensuring your documentation, notes, and articles look exactly as
@@ -155,10 +155,10 @@ function Landing() {
 
         <section className="flex flex-col md:flex-row-reverse items-center justify-between gap-8 md:gap-16">
           <div className="flex-1 space-y-6">
-            <h2 className="text-5xl font-bold bg-clip-text text-transparent bg-linear-to-r from-red-600 to-red-400">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-linear-to-r from-red-600 to-red-400">
               Share via Email
             </h2>
-            <p className="text-xl text-slate-600 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-slate-600 leading-relaxed">
               Collaboration made easy. Once your Markdown is ready, send it
               directly to your colleagues or clients via email right from the
               editor. No need to switch between apps or download files just to
@@ -178,10 +178,10 @@ function Landing() {
 
         <section className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-16">
           <div className="flex-1 space-y-6">
-            <h2 className="text-5xl font-bold bg-clip-text text-transparent bg-linear-to-r from-blue-600 to-blue-400">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-linear-to-r from-blue-600 to-blue-400">
               Export and Download
             </h2>
-            <p className="text-xl text-slate-600 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-slate-600 leading-relaxed">
               Keep your files where you need them. Whether you want the raw
               Markdown or a beautifully formatted PDF document, our export
               options ensure you have the right format for every occasion.
@@ -224,10 +224,10 @@ function Landing() {
 
         <section className="flex flex-col md:flex-row-reverse items-center justify-between gap-8 md:gap-16 pb-8 md:pb-16">
           <div className="flex-1 space-y-6">
-            <h2 className="text-5xl font-bold bg-clip-text text-transparent bg-linear-to-r from-gray-800 to-gray-600">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-linear-to-r from-gray-800 to-gray-600">
               Support for Markdown Flavors
             </h2>
-            <p className="text-xl text-slate-600 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-slate-600 leading-relaxed">
               Write exactly how you're used to. We fully support standard
               Markdown as well as GitHub Flavored Markdown (GFM), including
               tables, task lists, and code blocks with syntax highlighting.

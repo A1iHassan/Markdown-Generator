@@ -63,7 +63,7 @@ const Save = () => {
       <button
         className="flex flex-row items-center justify-center gap-2 cursor-pointer
                    text-slate-500 hover:text-slate-700 bg-slate-100 hover:bg-slate-200
-                   rounded-lg px-4 py-2 transition-all duration-200 w-full mt-2"
+                   rounded-lg px-4 py-2 transition-all duration-200 w-full mt-2 text-sm md:text-base"
         onClick={() => setShowModal(true)}
       >
         Save .md
@@ -76,10 +76,10 @@ const Save = () => {
       </button>
 
       {showModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 backdrop-blur-sm">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 backdrop-blur-sm px-4">
           <div
             ref={modalRef}
-            className="bg-white rounded-xl shadow-2xl p-6 w-80 flex flex-col gap-4
+            className="bg-white rounded-xl shadow-2xl p-6 w-full max-w-80 flex flex-col gap-4
                        animate-[fadeScale_0.2s_ease-out]"
           >
             <span className="text-lg font-semibold text-slate-700">
